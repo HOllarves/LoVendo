@@ -19,16 +19,23 @@ $(document).ready(function() {
           var markers = [];
 
           for (var i=0; i<res.length; i++) {
-            var latLong = new google.maps.LatLng(parseFloat(res[i]["geo"]["lat"]), parseFloat(res[i]["geo"]["lng"]))
+            var latLong = new google.maps.LatLng(parseFloat(res[i]["geo"]["lat"] + randomPos()), parseFloat(res[i]["geo"]["lng"]) + randomPos());
             var marker = new google.maps.Marker({
               position: latLong,
-              map: map
+              map: map,
+              icon: 'images/icon.png'
             });
             markers.push(marker);
           }
 
-          var markerCluster = new MarkerClusterer(map, markers,
-                      {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+          var markerCluster = new MarkerClusterer(map, markers, {
+            maxZoom: 18,
+            imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
       }
   });
 });
+
+function randomPos() {
+    console.log(Math.random() * (0.0001 - 0.00005) + 0.00005);
+    return Math.random() * (0.0001 - 0.00005) + 0.00005;
+}

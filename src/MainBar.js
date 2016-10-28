@@ -4,27 +4,24 @@ import './MainBar.css';
 var MainBar = React.createClass({
   render() {
     return(
-      <nav className="navbar navbar-default" role="navigation">
-        <div className="container-fluid">
-          <div className="navbar-header">
-            <a className="navbar-left icon-nav" href="#"><img className ="logo" src="images/logo.png"></img></a>
+      <div>
+        <nav className="navbar navbar-default" role="navigation">
+          <div className="container-fluid main-nav">
+            <div className="navbar-header">
+              <a className="navbar-left icon-nav" href="#"><img className="logo" role="presentation" src="images/logo.png"></img></a>
+            </div>
+            <div className="input-group navbar-left search-bar">
+              <span className="input-group-btn">
+                <button className="btn btn-default search-btn" type="button"><i className="glyphicon glyphicon-search"></i></button>
+              </span>
+              <input type="text" className="form-control search-form" placeholder="Search any Address, Neighborhood or Zip Code"></input>
+            </div>
+            <ul className="nav navbar-nav navbar-right">
+              <li><a className="hvr-underline-from-center" href="#">Log In</a></li>
+            </ul>
           </div>
-          <ul className="nav navbar-nav ddown">
-            <li className="dropdown">
-              <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">City <span className="caret"></span></a>
-              <ul className="dropdown-menu">
-                <li><a href="#">City 1</a></li>
-                <li><a href="#">City 2</a></li>
-              </ul>
-            </li>
-          </ul>
-          <ul className="nav navbar-nav navbar-right">
-            <li><a href="#">Page 1</a></li>
-            <li><a href="#">Page 2</a></li>
-            <li><a href="#">Page 3</a></li>
-          </ul>
-        </div>
-      </nav>
+        </nav>
+      </div>
     )
   }
 });

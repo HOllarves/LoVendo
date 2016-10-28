@@ -1,56 +1,60 @@
-.sub-navbar {
-  background-color: #E4E4E4;
+.main-nav {
+  background-color: #FFF;
 }
 
-.sub-navbar-item {
-  background-color: #D7D7D7;
-  border-radius: 0;
-  border: 0;
+.search-bar {
+  max-width: 500px;
+  line-height: 34px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  vertical-align: middle;
+  border: 0 !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
-.filter-ddown1 {
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  width: 160px;
-  line-height: 32px;
-}
-
-.dropdown-menu[aria-labelledby = filter-ddown1] {
-  border-radius: 0;
-  border: 0;
-  margin: 0;
-}
-
-.btn-default.btn-divider, .btn-default.btn-divider:hover, .btn-default.btn-divider:focus {
+.search-form, .search-btn {
+  border: 0 !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  border-radius: 0px;
   background-color: white;
-  width: 1px;
-  height: 32px;
-  padding: 0;
-  margin: 0;
 }
 
-.btn-default.btn-active, .btn-default.btn-active:hover, .btn-default.btn-active:focus {
-  background-color: #636363;
+.search-form {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
-.btn-active>i {
-  color: #D7D7D7;
+/* Underline From Center */
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  overflow: hidden;
 }
-
-.itemxx {
-  margin: 0;
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: #24A788;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
 }
-
-.btn-default, .btn-default:hover {
-  background-color: #D7D7D7;
-}
-
-.btn-default:active {
-  background-color: #CEF88A;
-}
-
-.btn-default:focus {
-  outline: 0 !important;
-  background-color: #D7D7D7;
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
 }

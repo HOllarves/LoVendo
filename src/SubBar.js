@@ -12,7 +12,6 @@ var SubBar = React.createClass({
     this.setState({opened: !this.state.opened})
   },
   renderClosed() {
-    console.log("closed")
     return (
       <div className="sub-navbar">
         <button className="sub-navbar-item btn btn-default" onClick={this.handleChange}><i className="glyphicon glyphicon-tasks"></i></button>
@@ -20,7 +19,6 @@ var SubBar = React.createClass({
     );
   },
   renderOpened() {
-    console.log("opened")
     return (
       <div className="sub-navbar">
         <button className="sub-navbar-item btn btn-default btn-active" onClick={this.handleChange}><i className="glyphicon glyphicon-tasks glyphicon-white"></i></button>
